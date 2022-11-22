@@ -55,6 +55,11 @@ def train_and_evaluate(config_path):
 
     (rmse, mae, r2) = eval_metrics(test_y, predicted_qualities)
 
+    print("Elasticnet model (alpha=%f, l1_ratio=%f):" % (alpha, l1_ratio))
+    print("  RMSE: %s" % rmse)
+    print("  MAE: %s" % mae)
+    print("  R2: %s" % r2)
+
     #####################################################
     scores_file = config["reports"]["scores"]
     params_file = config["reports"]["params"]
